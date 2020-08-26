@@ -11,7 +11,7 @@
             </visual>
             <collision>
                 <geometry>
-                    <box size="0.07 0.3 0.09"/>
+                    <box size="0.04 0.06 0.04"/>
                 </geometry>
             </collision>
             <inertial>
@@ -23,12 +23,22 @@
             
         </link>
 
-        <!--eye to hand RGBD system -->
+
+        <!--eye in hand RGBD system-->
         <joint name="kinect_joint" type="fixed">
+            <origin xyz="0 0.06 0.1" rpy="0 0 ${pi/2}"/>
+            <parent link="wrist_3_link"/>
+            <child link="kinect_link"/>
+        </joint>
+
+
+
+        <!--eye to hand RGBD system -->
+        <!--<joint name="kinect_joint" type="fixed">
             <origin xyz="0 0.75 1.5" rpy="0 ${pi/2} ${-pi/2}"/>
             <parent link="base_link"/>
             <child link="kinect_link"/>
-        </joint>
+        </joint>-->
 
 
         <!--kinect_depth_joint is the real reference frame of RGBD data-->
