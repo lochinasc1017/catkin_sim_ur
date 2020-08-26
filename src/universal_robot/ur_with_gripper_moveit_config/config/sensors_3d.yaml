@@ -1,0 +1,8 @@
+# The name of this file shouldn't be changed, or else the Setup Assistant won't detect it
+sensors:
+    # - {}
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /scene/points
+    max_range: 1.6
+    frame_subsample: 1
+    point_subsample: 1

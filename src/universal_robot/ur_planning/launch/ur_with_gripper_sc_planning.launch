@@ -1,0 +1,17 @@
+<launch>
+  <arg name="config" default="true"/>
+
+  
+  <!-- Launch moveit -->
+  <include file="$(find ur_with_gripper_moveit_config)/launch/ur5_with_gripper_moveit_planning_execution.launch">
+
+  </include>
+
+  <!--start rviz  -->
+  <include file="$(find ur_with_gripper_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="config" default="$(arg config)"/>
+
+  </include>
+
+
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+  <!--Parements setup-->  
+ 
+  
+  <!--Launch gazebo and Moveit Rviz-->
+  <include file="$(find ur_gazebo)/launch/ur5_with_gripper.launch" />
+  <include file="$(find ur_planning)/launch/ur_with_gripper_sc_planning.launch" />
+
+  
+
+
+
+</launch>
